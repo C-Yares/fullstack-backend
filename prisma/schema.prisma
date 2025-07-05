@@ -27,7 +27,7 @@ model User {
 model Password {
   hash      String   @id
   user_id   Int      @unique
-  user      User     @relation(fields: [user_id], references: [id])
+  user      User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 } 
 
 model Role {
